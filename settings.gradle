@@ -1,0 +1,8 @@
+rootProject.name = 'inspire-be'
+
+includeBuild('build-logic')
+include 'auth-service'
+include 'user-service'
+include 'common:cookie'
+include 'common:jwt'
+include 'common:contract'

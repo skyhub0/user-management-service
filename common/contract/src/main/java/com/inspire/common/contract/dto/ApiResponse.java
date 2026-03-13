@@ -1,0 +1,175 @@
+package com.inspire.common.contract.dto;
+
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.inspire.common.contract.exception.ErrorCode;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+
+import java.time.LocalDateTime;
+
+/**
+ *
+ * @param <T>
+ */
+@NoArgsConstructor
+@Getter
+@Setter
+@JsonInclude(JsonInclude.Include.NON_NULL)
+public class ApiResponse<T> {
+    /**
+     *
+     */
+    private boolean success;
+    /**
+     *
+     */
+    private int status;
+    /**
+     *
+     */
+    private T data;
+    /**
+     *
+     */
+    private ErrorResponse error;
+    /**
+     *
+     */
+    private LocalDateTime timestamp;
+
+    /**
+     *
+     * @param success
+     * @param status
+     * @param data
+     * @param error
+     * @param timestamp
+     */
+    private ApiResponse(boolean success, int status, T data, ErrorResponse error, LocalDateTime timestamp) {
+        this.success = success;
+        this.status = status;
+        this.data = data;
+        this.error = error;
+        this.timestamp = timestamp != null ? timestamp : LocalDateTime.now();
+    }
+
+    /**
+     *
+     * @param status
+     * @param data
+     * @param timestamp
+     * @return
+     * @param <T>
+     */
+    public static <T> ApiResponse<T> success(int status, T data, LocalDateTime timestamp) {
+        return new ApiResponse<>(true, status, data, null, timestamp);
+    }
+
+    /**
+     *
+     * @param status
+     * @param data
+     * @return
+     * @param <T>
+     */
+    public static <T> ApiResponse<T> success(int status, T data) {
+        return new ApiResponse<>(true, status, data, null, null);
+    }
+
+    /**
+     *
+     * @param data
+     * @param timestamp
+     * @return
+     * @param <T>
+     */
+    public static <T> ApiResponse<T> success(T data, LocalDateTime timestamp) {
+        return new ApiResponse<>(true, 200, data, null, timestamp);
+    }
+
+    /**
+     *
+     * @param data
+     * @return
+     * @param <T>
+     */
+    public static <T> ApiResponse<T> success(T data) {
+        return new ApiResponse<>(true, 200, data, null, null);
+    }
+
+    /**
+     *
+     * @param status
+     * @param error
+     * @param timestamp
+     * @return
+     * @param <T>
+     */
+    public static <T> ApiResponse<T> error(int status, ErrorResponse error, LocalDateTime timestamp) {
+        return new ApiResponse<>(false, status, null, error, timestamp);
+    }
+
+    /**
+     *
+     * @param status
+     * @param error
+     * @return
+     * @param <T>
+     */
+    public static <T> ApiResponse<T> error(int status, ErrorResponse error) {
+        return new ApiResponse<>(false, status, null, error, null);
+    }
+
+    /**
+     *
+     * @param status
+     * @param code
+     * @param message
+     * @param timestamp
+     * @return
+     * @param <T>
+     */
+    public static <T> ApiResponse<T> error(int status, String code, String message, LocalDateTime timestamp) {
+        return new ApiResponse<>(false, status, null, new ErrorResponse(code, message), timestamp);
+    }
+
+    /**
+     *
+     * @param status
+     * @param code
+     * @param message
+     * @return
+     * @param <T>
+     */
+    public static <T> ApiResponse<T> error(int status, String code, String message) {
+        return new ApiResponse<>(false, status, null, new ErrorResponse(code, message), null);
+    }
+
+    /**
+     *
+     * @param errorCode
+     * @param timestamp
+     * @return
+     * @param <T>
+     */
+    public static <T> ApiResponse<T> error(ErrorCode errorCode, LocalDateTime timestamp) {
+        int status = errorCode.getStatus();
+        String code = errorCode.getCode();
+        String message = errorCode.getMessage();
+        return new ApiResponse<>(false, status, null, new ErrorResponse(code, message), timestamp);
+    }
+
+    /**
+     *
+     * @param errorCode
+     * @return
+     * @param <T>
+     */
+    public static <T> ApiResponse<T> error(ErrorCode errorCode) {
+        int status = errorCode.getStatus();
+        String code = errorCode.getCode();;
+        String message = errorCode.getMessage();
+        return new ApiResponse<>(false, status, null, new ErrorResponse(code, message), null);
+    }
+}

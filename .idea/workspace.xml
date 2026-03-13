@@ -1,0 +1,361 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="a002885b-8dcf-42fa-8c45-c58cdf4233f2" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/auth-service/src/main/java/com/inspire/auth/AuthApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build-logic/build.gradle.kts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build-logic/settings.gradle.kts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build-logic/src/main/kotlin/java-conventions.gradle.kts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build-logic/src/main/kotlin/spring-boot-conventions.gradle.kts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build-logic/src/main/kotlin/spring-cloud-conventions.gradle.kts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build-logic/src/main/kotlin/spring-library-conventions.gradle.kts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build-logic/src/main/kotlin/spring-web-conventions.gradle.kts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/contract/src/main/java/com/inspire/common/contract/config/ContractAutoConfiguration.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/contract/src/main/java/com/inspire/common/contract/config/SwaggerConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/contract/src/main/java/com/inspire/common/contract/dto/ApiResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/contract/src/main/java/com/inspire/common/contract/dto/ErrorResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/contract/src/main/java/com/inspire/common/contract/exception/BaseException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/contract/src/main/java/com/inspire/common/contract/exception/ContractErrorCode.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/contract/src/main/java/com/inspire/common/contract/exception/ErrorCode.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/contract/src/main/java/com/inspire/common/contract/handler/GlobalControllerAdvice.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/contract/src/main/resources/META-INF/spring/org.springframework.boot.autoconfigure.AutoConfiguration.imports" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/contract/src/test/java/com/inspire/common/contract/GlobalControllerAdviceTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/contract/src/test/java/com/inspire/common/contract/TestApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/contract/src/test/java/com/inspire/common/contract/controller/TestController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/contract/src/test/java/com/inspire/common/contract/dto/TestDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/contract/src/test/java/com/inspire/common/contract/exception/TestErrorCode.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/contract/src/test/java/com/inspire/common/contract/exception/TestException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/cookie/src/main/java/com/inspire/common/cookie/CookieAttributes.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/cookie/src/main/java/com/inspire/common/cookie/CookieUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/cookie/src/main/java/com/inspire/common/cookie/config/CookieAutoConfiguration.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/cookie/src/main/java/com/inspire/common/cookie/config/CookieProperties.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/cookie/src/main/resources/META-INF/spring/org.springframework.boot.autoconfigure.AutoConfiguration.imports" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/cookie/src/test/java/com/inspire/common/cookie/CookieUtilsTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/cookie/src/test/java/com/inspire/common/cookie/config/CookieAutoConfigurationTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/jwt/src/main/java/com/inspire/common/jwt/JwtUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/jwt/src/main/java/com/inspire/common/jwt/JwtValidationException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/jwt/src/main/java/com/inspire/common/jwt/config/JwtAutoConfiguration.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/jwt/src/main/java/com/inspire/common/jwt/config/JwtProperties.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/jwt/src/main/resources/META-INF/spring/org.springframework.boot.autoconfigure.AutoConfiguration.imports" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/jwt/src/test/java/com/inspire/common/jwt/JwtUtilsTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/jwt/src/test/java/com/inspire/common/jwt/config/JwtAutoConfigurationTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gradle/libs.versions.toml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gradlew" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gradlew.bat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/settings.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user-service/src/main/java/com/inspire/user/UserApplication.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <task path="$PROJECT_DIR$">
+          <activation />
+        </task>
+        <projects_view>
+          <tree_state>
+            <expand>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="inspire-be" type="f1a62948:ProjectNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="inspire-be" type="f1a62948:ProjectNode" />
+                <item name="inspire-be" type="2d1252cf:ModuleNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="inspire-be" type="f1a62948:ProjectNode" />
+                <item name="inspire-be" type="2d1252cf:ModuleNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="inspire-be" type="f1a62948:ProjectNode" />
+                <item name="inspire-be" type="2d1252cf:ModuleNode" />
+                <item name="common" type="2d1252cf:ModuleNode" />
+              </path>
+            </expand>
+            <select />
+          </tree_state>
+        </projects_view>
+      </state>
+    </system>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Enum" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GradleScriptDefinitionsStorage" workingDir="$PROJECT_DIR$" gradleHome="C:\Users\ws050\.gradle\wrapper\dists\gradle-9.3.1-bin\23ovyewtku6u96viwx3xl3oks\gradle-9.3.1" javaHome="C:\Program Files\Java\jdk-17" gradleVersion="9.3.1" />
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 3
+}</component>
+  <component name="ProjectId" id="3Asuga4IxZbHusoRsmHYpmwmj3k" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Gradle.Build inspire-be.executor": "Run",
+    "Gradle.CookieAutoConfigurationTest.executor": "Run",
+    "Gradle.CookieUtilsTest.executor": "Run",
+    "Gradle.GlobalControllerAdviceTest.executor": "Run",
+    "Gradle.JwtAutoConfigurationTest.executor": "Run",
+    "Gradle.JwtUtilsTest.executor": "Run",
+    "Gradle.Load Gradle Dependencies.executor": "Run",
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
+    "git-widget-placeholder": "main",
+    "ignore.virus.scanning.warn.message": "true",
+    "kotlin-language-version-configured": "true",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "onboarding.tips.debug.path": "C:/Users/ws050/mini2/inspire-be/user-service/src/main/java/com/inspire/Main.java",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "project.kotlinCompiler",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\ws050\mini2\inspire-be\common\contract\src\main\resources\META-INF\spring" />
+    </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="com.inspire.common.jwt" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Gradle.GlobalControllerAdviceTest">
+    <configuration name="CookieAutoConfigurationTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":common:cookie:test" />
+            <option value="--tests" />
+            <option value="&quot;com.inspire.common.cookie.config.CookieAutoConfigurationTest&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <ExternalSystemDebugDisabled>false</ExternalSystemDebugDisabled>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>true</RunAsTest>
+      <GradleProfilingDisabled>false</GradleProfilingDisabled>
+      <GradleCoverageDisabled>false</GradleCoverageDisabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="CookieUtilsTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":common:cookie:test" />
+            <option value="--tests" />
+            <option value="&quot;com.inspire.common.cookie.CookieUtilsTest&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <ExternalSystemDebugDisabled>false</ExternalSystemDebugDisabled>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>true</RunAsTest>
+      <GradleProfilingDisabled>false</GradleProfilingDisabled>
+      <GradleCoverageDisabled>false</GradleCoverageDisabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="GlobalControllerAdviceTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":common:contract:test" />
+            <option value="--tests" />
+            <option value="&quot;com.inspire.common.contract.GlobalControllerAdviceTest&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <ExternalSystemDebugDisabled>false</ExternalSystemDebugDisabled>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>true</RunAsTest>
+      <GradleProfilingDisabled>false</GradleProfilingDisabled>
+      <GradleCoverageDisabled>false</GradleCoverageDisabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="JwtAutoConfigurationTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":common:jwt:test" />
+            <option value="--tests" />
+            <option value="&quot;com.inspire.common.jwt.config.JwtAutoConfigurationTest&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <ExternalSystemDebugDisabled>false</ExternalSystemDebugDisabled>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>true</RunAsTest>
+      <GradleProfilingDisabled>false</GradleProfilingDisabled>
+      <GradleCoverageDisabled>false</GradleCoverageDisabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="JwtUtilsTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":common:jwt:test" />
+            <option value="--tests" />
+            <option value="&quot;com.inspire.common.jwt.JwtUtilsTest&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <ExternalSystemDebugDisabled>false</ExternalSystemDebugDisabled>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>true</RunAsTest>
+      <GradleProfilingDisabled>false</GradleProfilingDisabled>
+      <GradleCoverageDisabled>false</GradleCoverageDisabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="AuthApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="inspire-be.auth-service.main" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.inspire.auth.AuthApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Gradle.GlobalControllerAdviceTest" />
+        <item itemvalue="Gradle.CookieAutoConfigurationTest" />
+        <item itemvalue="Gradle.CookieUtilsTest" />
+        <item itemvalue="Gradle.JwtUtilsTest" />
+        <item itemvalue="Gradle.JwtAutoConfigurationTest" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="a002885b-8dcf-42fa-8c45-c58cdf4233f2" name="Changes" comment="" />
+      <created>1773393720120</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1773393720120</updated>
+      <workItem from="1773393721337" duration="17000" />
+      <workItem from="1773393747741" duration="1067000" />
+      <workItem from="1773394875090" duration="217000" />
+      <workItem from="1773395102810" duration="1355000" />
+      <workItem from="1773398223182" duration="537000" />
+      <workItem from="1773398795965" duration="483000" />
+      <workItem from="1773399285680" duration="101000" />
+      <workItem from="1773399390692" duration="626000" />
+      <workItem from="1773400051640" duration="912000" />
+      <workItem from="1773400991326" duration="972000" />
+      <workItem from="1773401989635" duration="383000" />
+      <workItem from="1773402378095" duration="1170000" />
+      <workItem from="1773403578016" duration="4583000" />
+      <workItem from="1773408731954" duration="1644000" />
+      <workItem from="1773418547146" duration="5819000" />
+      <workItem from="1773424426929" duration="100000" />
+      <workItem from="1773424535558" duration="489000" />
+      <workItem from="1773425046809" duration="3966000" />
+      <workItem from="1773429054962" duration="1475000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/inspire/Main.java</url>
+          <line>13</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/common/src/main/java/com/inspire/Main.java</url>
+          <line>13</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>

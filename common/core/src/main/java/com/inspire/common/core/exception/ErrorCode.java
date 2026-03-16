@@ -1,4 +1,4 @@
-package com.inspire.common.contract.exception;
+package com.inspire.common.core.exception;
 
 /**
  * 각 micro service에서의 error를 담당하기 위한 interface

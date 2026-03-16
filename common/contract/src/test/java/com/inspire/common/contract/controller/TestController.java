@@ -1,9 +1,11 @@
 package com.inspire.common.contract.controller;
 
-import com.inspire.common.contract.dto.ApiResponse;
+import com.inspire.common.core.dto.ApiResponse;
 import com.inspire.common.contract.dto.TestDTO;
 import com.inspire.common.contract.exception.TestErrorCode;
 import com.inspire.common.contract.exception.TestException;
+import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.responses.ApiResponses;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -89,17 +91,17 @@ public class TestController {
 
     @GetMapping("/api4")
     public ResponseEntity<ApiResponse<TestDTO>> api4() {
-        return ResponseEntity.status(201).body(ApiResponse.success(201, new TestDTO("api4")));
+        return ResponseEntity.status(201).body(ApiResponse.ofSuccess(201, new TestDTO("api4")));
     }
 
     @GetMapping("/api5")
     public ApiResponse<TestDTO> api5() {
-        return ApiResponse.success(200, new TestDTO("api5"));
+        return ApiResponse.ofSuccess(200, new TestDTO("api5"));
     }
 
     @GetMapping("/api6")
     public ResponseEntity api6() {
-        return ResponseEntity.status(208).body(ApiResponse.success(208, new TestDTO("api6")));
+        return ResponseEntity.status(208).body(ApiResponse.ofSuccess(208, new TestDTO("api6")));
     }
 
     @GetMapping("/api7")
@@ -129,5 +131,15 @@ public class TestController {
     @GetMapping("/api12")
     public TestDTO api12() {
         throw new TestException(TestErrorCode.TEST_ERROR1);
+    }
+
+    @GetMapping("/api13")
+    public ApiResponse<?> api13() {
+        return ApiResponse.ofSuccess(200, new TestDTO("api13"));
+    }
+
+    @GetMapping("/api14")
+    public ResponseEntity<ApiResponse<?>> api14() {
+        return ResponseEntity.status(201).body(ApiResponse.ofSuccess(201, new TestDTO("api14")));
     }
 }

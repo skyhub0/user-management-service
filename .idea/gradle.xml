@@ -25,6 +25,7 @@
             <option value="$PROJECT_DIR$/common" />
             <option value="$PROJECT_DIR$/common/contract" />
             <option value="$PROJECT_DIR$/common/cookie" />
+            <option value="$PROJECT_DIR$/common/core" />
             <option value="$PROJECT_DIR$/common/jwt" />
             <option value="$PROJECT_DIR$/user-service" />
           </set>

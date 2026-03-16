@@ -1,4 +1,4 @@
-package com.inspire.common.contract.exception;
+package com.inspire.common.core.exception;
 
 import lombok.extern.slf4j.Slf4j;
 

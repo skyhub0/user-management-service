@@ -1,5 +1,5 @@
 plugins {
-    id("spring-boot-conventions")
+    id("spring-app-conventions")
 }
 
 extra["springCloudVersion"] = "2024.0.0"

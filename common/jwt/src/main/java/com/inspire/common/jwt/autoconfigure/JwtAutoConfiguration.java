@@ -1,12 +1,11 @@
-package com.inspire.common.jwt.config;
+package com.inspire.common.jwt.autoconfigure;
 
 import com.inspire.common.jwt.JwtUtils;
+import com.inspire.common.jwt.config.JwtProperties;
 import org.springframework.boot.autoconfigure.AutoConfiguration;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingBean;
-import org.springframework.boot.autoconfigure.jackson.JacksonAutoConfiguration;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.Configuration;
 
 /**
  * Auto-configuration for the {@link JwtUtils}.

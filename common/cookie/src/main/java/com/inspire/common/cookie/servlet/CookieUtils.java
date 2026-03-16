@@ -1,8 +1,9 @@
-package com.inspire.common.cookie;
+package com.inspire.common.cookie.servlet;
 
 import java.util.Arrays;
 import java.util.Optional;
 
+import com.inspire.common.cookie.model.CookieAttributes;
 import com.inspire.common.cookie.config.CookieProperties;
 import jakarta.servlet.http.Cookie;
 import jakarta.servlet.http.HttpServletRequest;
@@ -114,11 +115,9 @@ public class CookieUtils {
                         .findFirst());
 
         optionalCookie.ifPresentOrElse(
-                cookie -> log.debug("Cookie found with (name: {}, value: {}, domain: {}, path: {})",
+                cookie -> log.debug("Cookie found with (name: {}, value: {})",
                         cookie.getName(),
-                        cookie.getValue(),
-                        cookie.getDomain(),
-                        cookie.getPath()),
+                        cookie.getValue()),
                 () -> log.debug("No cookie found with (name: {})", name)
         );
 

@@ -1,17 +1,18 @@
 package com.inspire.common.cookie.config;
 
-import com.inspire.common.cookie.CookieUtils;
+import com.inspire.common.cookie.reactive.CookieUtils;
+import com.inspire.common.cookie.autoconfigure.CookieAutoConfiguration;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.autoconfigure.AutoConfigurations;
-import org.springframework.boot.test.context.runner.ApplicationContextRunner;
+import org.springframework.boot.test.context.runner.ReactiveWebApplicationContextRunner;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-@DisplayName("Tests for CookieAutoConfiguration")
-public class CookieAutoConfigurationTest {
+@DisplayName("Tests for ReactiveCookieAutoConfiguration")
+public class ReactiveCookieAutoConfigurationTest {
 
-    private final ApplicationContextRunner contextRunner = new ApplicationContextRunner()
+    private final ReactiveWebApplicationContextRunner contextRunner = new ReactiveWebApplicationContextRunner()
             .withConfiguration(AutoConfigurations.of(CookieAutoConfiguration.class));
 
     @Test

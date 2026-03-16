@@ -1,24 +1,39 @@
 package com.inspire.common.contract;
 
-import com.inspire.common.contract.handler.GlobalControllerAdvice;
+import com.fasterxml.jackson.databind.ObjectMapper;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
 import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.context.annotation.Import;
+import org.springframework.boot.test.context.TestConfiguration;
+import org.springframework.context.MessageSource;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.support.ResourceBundleMessageSource;
+import org.springframework.http.MediaType;
 import org.springframework.test.web.servlet.MockMvc;
+
+import java.util.Locale;
 
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
 import static org.springframework.test.web.servlet.result.MockMvcResultHandlers.print;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
-@SpringBootTest
+@SpringBootTest(properties = {
+        "spring.messages.encoding=UTF-8",
+        "spring.messages.fallback-to-system-locale=false"
+})
 @AutoConfigureMockMvc
-@Import(GlobalControllerAdvice.class)
 public class GlobalControllerAdviceTest {
 
     @Autowired
     private MockMvc mockMvc;
+
+    @Autowired
+    private ObjectMapper objectMapper;
+
+    @Autowired
+    private MessageSource messageSource;
 
     @Test
     void testResponseBodyAdvice() throws Exception {
@@ -69,12 +84,6 @@ public class GlobalControllerAdviceTest {
         mockMvc.perform(get("/method12"))
                 .andDo(print())
                 .andExpect(status().isOk());
-
-        mockMvc.perform(get("/method13"))
-                .andDo(print());
-
-        mockMvc.perform(get("/method14"))
-                .andDo(print());
     }
 
     @Test
@@ -114,5 +123,35 @@ public class GlobalControllerAdviceTest {
 
         mockMvc.perform(get("/api12"))
                 .andDo(print());
+
+        mockMvc.perform(get("/api13"))
+                .andDo(print());
+
+        mockMvc.perform(get("/api14"))
+                .andDo(print());
+    }
+
+    @Test
+    void testValidation() throws Exception {
+        String json = "[{\"message\": \"\"}, {\"message\": \"string2\"}, {\"message\": \"string3\"}]";
+        String urlencoded = "message=";
+        mockMvc.perform(get("/validation1")
+                        .header("Accept-Language", "ko")
+                        .contentType(MediaType.APPLICATION_JSON)
+                        .content(json))
+                .andDo(print());
+
+        mockMvc.perform(get("/validation2")
+                        .contentType(MediaType.APPLICATION_FORM_URLENCODED)
+                        .header("Accept-Language", "ko")
+                        .content(urlencoded))
+                .andDo(print());
+    }
+
+    @SpringBootApplication
+    static class TestApplication {
+
     }
 }
+
+// NoResourceFoundException

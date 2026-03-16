@@ -1,1 +1,1 @@
-com.inspire.common.jwt.config.JwtAutoConfiguration
+com.inspire.common.jwt.autoconfigure.JwtAutoConfiguration

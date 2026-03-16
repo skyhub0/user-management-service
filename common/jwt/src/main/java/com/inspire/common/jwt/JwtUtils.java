@@ -1,6 +1,8 @@
 package com.inspire.common.jwt;
 
 import com.inspire.common.jwt.config.JwtProperties;
+import com.inspire.common.jwt.exception.JwtErrorCode;
+import com.inspire.common.jwt.exception.JwtValidationException;
 import io.jsonwebtoken.*;
 import io.jsonwebtoken.security.Keys;
 import io.jsonwebtoken.security.SignatureException;
@@ -18,7 +20,7 @@ import java.util.*;
  * Provides methods to create and validate JWT tokens, and parse JWT claims.
  *
  * <hr>
- *
+ * <p>
  * JWT token의 생성, 파싱, 검증을 위한 유틸리티 클래스.
  *
  * <p>
@@ -34,28 +36,28 @@ public class JwtUtils {
 
     /**
      * Signing key used to generate and verify access tokens. <hr>
-     *
+     * <p>
      * access token 발급과 검증에 사용되는 서명키.
      */
     private final Key accessKey;
 
     /**
      * Signing key used to generate and verify refresh tokens. <hr>
-     *
+     * <p>
      * refresh token 발급과 검증에 사용되는 서명키.
      */
     private final Key refreshKey;
 
     /**
      * Expiration time for access tokens in milliseconds. <hr>
-     *
+     * <p>
      * 밀리초 단위 access token 만료 시간.
      */
     private final long accessExpires; // milliseconds
 
     /**
      * Expiration time for refresh tokens in milliseconds. <hr>
-     *
+     * <p>
      * 밀리초 단위 refresh token 만료 시간.
      */
     private final long refreshExpires; // milliseconds
@@ -67,7 +69,7 @@ public class JwtUtils {
      * Validates inputs and initializes signing keys for access and refresh tokens.
      *
      * <hr>
-     *
+     * <p>
      * 지정된 시크릿 키 문자열과 만료 시간으로 {@code JwtUtils} 인스턴스를 생성합니다.
      *
      * <p>
@@ -75,10 +77,10 @@ public class JwtUtils {
      *
      * <hr>
      *
-     * @param accessSecret      the secret key string for signing access tokens
-     * @param refreshSecret     the secret key string for signing refresh tokens
-     * @param accessExpires     the expiration time of access tokens in milliseconds
-     * @param refreshExpires    the expiration time of refresh tokens in milliseconds
+     * @param accessSecret   the secret key string for signing access tokens
+     * @param refreshSecret  the secret key string for signing refresh tokens
+     * @param accessExpires  the expiration time of access tokens in milliseconds
+     * @param refreshExpires the expiration time of refresh tokens in milliseconds
      */
     public JwtUtils(String accessSecret, String refreshSecret, long accessExpires, long refreshExpires) {
         Assert.hasText(accessSecret, "jwt.access.secret must be set to a non-null string value.");
@@ -102,7 +104,7 @@ public class JwtUtils {
      * and delegates to another constructor.
      *
      * <hr>
-     *
+     * <p>
      * 주어진 {@link JwtProperties}를 이용하여 {@code JwtUtils} 인스턴스를 생성합니다.
      *
      * <p>
@@ -128,7 +130,7 @@ public class JwtUtils {
      * Generates a signed JWT access token including user ID as a subject and roles.
      *
      * <hr>
-     *
+     * <p>
      * 유저의 권한과 발급 시간을 기반으로 access token을 생성합니다.
      *
      * <p>
@@ -136,9 +138,9 @@ public class JwtUtils {
      *
      * <hr>
      *
-     * @param userId    the user ID
-     * @param roles     the roles assigned to the user
-     * @param issuedAt  the issued timestamp in milliseconds
+     * @param userId   the user ID
+     * @param roles    the roles assigned to the user
+     * @param issuedAt the issued timestamp in milliseconds
      * @return the signed JWT access token
      */
     public String createAccessToken(Long userId, Collection<String> roles, long issuedAt) {
@@ -163,13 +165,13 @@ public class JwtUtils {
      * Creates a new access token for a user using the current time.
      *
      * <hr>
-     *
+     * <p>
      * 현재 시각을 발급 시간으로 하여 access token을 생성합니다.
      *
      * <hr>
      *
-     * @param userId    the user ID
-     * @param roles     the roles assigned to the user
+     * @param userId the user ID
+     * @param roles  the roles assigned to the user
      * @return the signed JWT access token
      * @see #createAccessToken(Long, Collection, long)
      */
@@ -185,7 +187,7 @@ public class JwtUtils {
      * Generates a signed JWT refresh token including user ID as a subject.
      *
      * <hr>
-     *
+     * <p>
      * 발급 시간을 기반으로 refresh token을 생성합니다.
      *
      * <p>
@@ -193,8 +195,8 @@ public class JwtUtils {
      *
      * <hr>
      *
-     * @param userId    the user ID
-     * @param issuedAt  the issued timestamp in milliseconds
+     * @param userId   the user ID
+     * @param issuedAt the issued timestamp in milliseconds
      * @return the signed JWT refresh token
      */
     public String createRefreshToken(Long userId, long issuedAt) {
@@ -217,7 +219,7 @@ public class JwtUtils {
      * Creates a new refresh token for a user with the current timestamp.
      *
      * <hr>
-     *
+     * <p>
      * 현재 시각을 발급 시간으로 하여 refresh token을 생성합니다.
      *
      * <hr>
@@ -235,13 +237,13 @@ public class JwtUtils {
      * Parses a JWT token using the provided signing key.
      *
      * <hr>
-     *
+     * <p>
      * 주어진 서명키로 JWT token을 파싱합니다.
      *
      * <hr>
      *
-     * @param token         the JWT token string
-     * @param signingKey    the key used to verify the signature
+     * @param token      the JWT token string
+     * @param signingKey the key used to verify the signature
      * @return parsed claims
      * @throws JwtValidationException if the token is invalid or expired
      */
@@ -257,13 +259,13 @@ public class JwtUtils {
             log.debug("JWT parsed successfully for (user: {})", claims.getSubject());
         } catch (ExpiredJwtException e) {
             log.debug("JWT expired");
-            throw new JwtValidationException("JWT expired", e);
+            throw new JwtValidationException(JwtErrorCode.EXPIRED_JWT);
         } catch (SignatureException e) {
             log.debug("Invalid JWT signature");
-            throw new JwtValidationException("Invalid JWT signature", e);
+            throw new JwtValidationException(JwtErrorCode.INVALID_SIGNATURE);
         } catch (JwtException e) {
             log.debug("Unsupported or Malformed JWT accepted");
-            throw new JwtValidationException("Unsupported or Malformed JWT accepted", e);
+            throw new JwtValidationException(JwtErrorCode.UNSUPPORTED_OR_MALFORMED);
         }
         return claims;
     }
@@ -272,7 +274,7 @@ public class JwtUtils {
      * Parses an access token using the configured access key.
      *
      * <hr>
-     *
+     * <p>
      * 설정된 서명키로 access token을 파싱합니다.
      *
      * <hr>
@@ -290,14 +292,14 @@ public class JwtUtils {
      * Parses a refresh token using the configured refresh key.
      *
      * <hr>
-     *
+     * <p>
      * 설정된 서명키로 refresh token을 파싱합니다.
      *
      * <hr>
      *
      * @param token the JWT refresh token
      * @return parsed claims
-     *         (파싱된 클레임)
+     * (파싱된 클레임)
      * @throws JwtValidationException if the token is invalid or expired
      *                                (token이 만료되거나 유효하지 않은 경우)
      * @see #parseToken(String, Key)
@@ -310,13 +312,13 @@ public class JwtUtils {
      * Validates a JWT token using the provided signing key.
      *
      * <hr>
-     *
+     * <p>
      * 주어진 서명키로 JWT token의 유효성을 검증합니다.
      *
      * <hr>
      *
-     * @param token         the JWT token string
-     * @param signingKey    the key used to verify the signature
+     * @param token      the JWT token string
+     * @param signingKey the key used to verify the signature
      * @return {@code true} if valid, {@code false} otherwise
      * @see #parseToken(String, Key)
      */
@@ -333,7 +335,7 @@ public class JwtUtils {
      * Validates an access token using the configured access key.
      *
      * <hr>
-     *
+     * <p>
      * 설정된 서명키로 access token의 유효성을 검증합니다.
      *
      * <hr>
@@ -350,7 +352,7 @@ public class JwtUtils {
      * Validates a refresh token using the configured refresh key.
      *
      * <hr>
-     *
+     * <p>
      * 설정된 서명키로 refresh token의 유효성을 검증합니다.
      *
      * <hr>
@@ -367,7 +369,7 @@ public class JwtUtils {
      * Returns the configured expiration time of access tokens in seconds.
      *
      * <hr>
-     *
+     * <p>
      * 설정된 access token의 만료 기한을 초 단위로 반환합니다.
      *
      * <hr>
@@ -382,13 +384,13 @@ public class JwtUtils {
      * Extracts the user ID from a JWT token string using the provided signing key.
      *
      * <hr>
-     *
+     * <p>
      * 주어진 서명키로 JWT token 내부 사용자 ID를 추출합니다.
      *
      * <hr>
      *
-     * @param token         the JWT token string
-     * @param signingKey    the key used to verify the signature
+     * @param token      the JWT token string
+     * @param signingKey the key used to verify the signature
      * @return the user ID
      * @throws JwtValidationException if the token is invalid or expired
      * @see #parseToken(String, Key)
@@ -401,7 +403,7 @@ public class JwtUtils {
      * Extracts the user ID from an access token.
      *
      * <hr>
-     *
+     * <p>
      * access token 내부 사용자 ID를 추출합니다.
      *
      * <hr>
@@ -419,7 +421,7 @@ public class JwtUtils {
      * Extracts the user ID from a refresh token.
      *
      * <hr>
-     *
+     * <p>
      * refresh token 내부 사용자 ID를 추출합니다.
      *
      * <hr>
@@ -437,7 +439,7 @@ public class JwtUtils {
      * Retrieves the roles assigned to the user from an access token.
      *
      * <hr>
-     *
+     * <p>
      * access token 내부 권한 목록을 불러옵니다.
      *
      * <hr>

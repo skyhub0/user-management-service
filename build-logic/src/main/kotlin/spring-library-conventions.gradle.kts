@@ -2,7 +2,9 @@ import org.gradle.kotlin.dsl.named
 import org.springframework.boot.gradle.tasks.bundling.BootJar
 
 plugins {
-    id("spring-boot-conventions")
+    id("java-library-conventions")
+    id("org.springframework.boot")
+    id("io.spring.dependency-management")
 }
 
 dependencies {

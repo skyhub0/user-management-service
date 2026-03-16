@@ -1,0 +1,7 @@
+plugins {
+    id 'java-library-conventions'
+}
+
+dependencies {
+    compileOnly libs.jackson.annotations
+}

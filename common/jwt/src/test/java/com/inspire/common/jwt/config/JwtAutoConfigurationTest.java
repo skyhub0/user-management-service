@@ -1,6 +1,7 @@
 package com.inspire.common.jwt.config;
 
 import com.inspire.common.jwt.JwtUtils;
+import com.inspire.common.jwt.autoconfigure.JwtAutoConfiguration;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.autoconfigure.AutoConfigurations;

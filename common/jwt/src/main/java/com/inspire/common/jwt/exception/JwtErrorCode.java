@@ -1,17 +1,18 @@
-package com.inspire.common.contract.exception;
+package com.inspire.common.jwt.exception;
 
 import com.inspire.common.core.exception.ErrorCode;
 
-public enum TestErrorCode implements ErrorCode {
+public enum JwtErrorCode implements ErrorCode {
 
-    TEST_ERROR1(401, "T001", "It is T001"),
-    TEST_ERROR2(402, "T002", "It is T002");
+    EXPIRED_JWT(401, "JWT001", "JWT expired"),
+    INVALID_SIGNATURE(401, "JWT002", "Invalid JWT signature"),
+    UNSUPPORTED_OR_MALFORMED(401, "JWT003", "Unsupported or malformed JWT received");
 
     private final int status;
     private final String code;
     private final String message;
 
-    TestErrorCode(int status, String code, String message) {
+    JwtErrorCode(int status, String code, String message) {
         this.status = status;
         this.code = code;
         this.message = message;

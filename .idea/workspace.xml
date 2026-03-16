@@ -5,51 +5,54 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a002885b-8dcf-42fa-8c45-c58cdf4233f2" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/auth-service/src/main/java/com/inspire/auth/AuthApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-logic/build.gradle.kts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-logic/settings.gradle.kts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-logic/src/main/kotlin/java-conventions.gradle.kts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-logic/src/main/kotlin/spring-boot-conventions.gradle.kts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-logic/src/main/kotlin/spring-cloud-conventions.gradle.kts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-logic/src/main/kotlin/spring-library-conventions.gradle.kts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-logic/src/main/kotlin/spring-web-conventions.gradle.kts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/common/contract/src/main/java/com/inspire/common/contract/config/ContractAutoConfiguration.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/common/contract/src/main/java/com/inspire/common/contract/config/SwaggerConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/common/contract/src/main/java/com/inspire/common/contract/dto/ApiResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/common/contract/src/main/java/com/inspire/common/contract/dto/ErrorResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/common/contract/src/main/java/com/inspire/common/contract/exception/BaseException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/common/contract/src/main/java/com/inspire/common/contract/exception/ContractErrorCode.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/common/contract/src/main/java/com/inspire/common/contract/exception/ErrorCode.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/common/contract/src/main/java/com/inspire/common/contract/handler/GlobalControllerAdvice.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/common/contract/src/main/resources/META-INF/spring/org.springframework.boot.autoconfigure.AutoConfiguration.imports" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/common/contract/src/test/java/com/inspire/common/contract/GlobalControllerAdviceTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/common/contract/src/test/java/com/inspire/common/contract/TestApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/common/contract/src/test/java/com/inspire/common/contract/controller/TestController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/common/contract/src/test/java/com/inspire/common/contract/dto/TestDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/common/contract/src/test/java/com/inspire/common/contract/exception/TestErrorCode.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/common/contract/src/test/java/com/inspire/common/contract/exception/TestException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/common/cookie/src/main/java/com/inspire/common/cookie/CookieAttributes.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/common/cookie/src/main/java/com/inspire/common/cookie/CookieUtils.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/common/cookie/src/main/java/com/inspire/common/cookie/config/CookieAutoConfiguration.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/common/cookie/src/main/java/com/inspire/common/cookie/config/CookieProperties.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/common/cookie/src/main/resources/META-INF/spring/org.springframework.boot.autoconfigure.AutoConfiguration.imports" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/common/cookie/src/test/java/com/inspire/common/cookie/CookieUtilsTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/common/cookie/src/test/java/com/inspire/common/cookie/config/CookieAutoConfigurationTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/common/jwt/src/main/java/com/inspire/common/jwt/JwtUtils.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/common/jwt/src/main/java/com/inspire/common/jwt/JwtValidationException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/common/jwt/src/main/java/com/inspire/common/jwt/config/JwtAutoConfiguration.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/common/jwt/src/main/java/com/inspire/common/jwt/config/JwtProperties.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/common/jwt/src/main/resources/META-INF/spring/org.springframework.boot.autoconfigure.AutoConfiguration.imports" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/common/jwt/src/test/java/com/inspire/common/jwt/JwtUtilsTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/common/jwt/src/test/java/com/inspire/common/jwt/config/JwtAutoConfigurationTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gradle/libs.versions.toml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gradlew" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gradlew.bat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/settings.gradle" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/user-service/src/main/java/com/inspire/user/UserApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build-logic/src/main/kotlin/java-library-conventions.gradle.kts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/contract/src/main/java/com/inspire/common/contract/exception/CAErrorCode.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/contract/src/test/java/com/inspire/common/contract/controller/ValidationTestController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/contract/src/test/java/com/inspire/common/contract/dto/ValidationTestDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/cookie/src/main/java/com/inspire/common/cookie/reactive/CookieUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/cookie/src/test/java/com/inspire/common/cookie/config/ReactiveCookieAutoConfigurationTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/core/src/main/java/com/inspire/common/core/dto/ApiResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/core/src/main/java/com/inspire/common/core/dto/ErrorResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/core/src/main/java/com/inspire/common/core/exception/BaseException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/core/src/main/java/com/inspire/common/core/exception/ErrorCode.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/jwt/src/main/java/com/inspire/common/jwt/exception/JwtErrorCode.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build-logic/src/main/kotlin/spring-boot-conventions.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/build-logic/src/main/kotlin/spring-app-conventions.gradle.kts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build-logic/src/main/kotlin/spring-cloud-conventions.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/build-logic/src/main/kotlin/spring-cloud-conventions.gradle.kts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build-logic/src/main/kotlin/spring-library-conventions.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/build-logic/src/main/kotlin/spring-library-conventions.gradle.kts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build-logic/src/main/kotlin/spring-web-conventions.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/build-logic/src/main/kotlin/spring-web-conventions.gradle.kts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/contract/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/common/contract/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/contract/src/main/java/com/inspire/common/contract/config/ContractAutoConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/contract/src/main/java/com/inspire/common/contract/autoconfigure/ContractAutoConfiguration.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/contract/src/main/java/com/inspire/common/contract/config/SwaggerConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/contract/src/main/java/com/inspire/common/contract/dto/ApiResponse.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/contract/src/main/java/com/inspire/common/contract/dto/ErrorResponse.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/contract/src/main/java/com/inspire/common/contract/exception/BaseException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/contract/src/main/java/com/inspire/common/contract/exception/ContractErrorCode.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/contract/src/main/java/com/inspire/common/contract/exception/ContractErrorCode.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/contract/src/main/java/com/inspire/common/contract/exception/ErrorCode.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/contract/src/main/java/com/inspire/common/contract/handler/GlobalControllerAdvice.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/contract/src/main/java/com/inspire/common/contract/handler/GlobalControllerAdvice.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/contract/src/main/resources/META-INF/spring/org.springframework.boot.autoconfigure.AutoConfiguration.imports" beforeDir="false" afterPath="$PROJECT_DIR$/common/contract/src/main/resources/META-INF/spring/org.springframework.boot.autoconfigure.AutoConfiguration.imports" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/contract/src/test/java/com/inspire/common/contract/GlobalControllerAdviceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/contract/src/test/java/com/inspire/common/contract/GlobalControllerAdviceTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/contract/src/test/java/com/inspire/common/contract/TestApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/contract/src/test/java/com/inspire/common/contract/controller/TestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/contract/src/test/java/com/inspire/common/contract/controller/TestController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/contract/src/test/java/com/inspire/common/contract/exception/TestErrorCode.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/contract/src/test/java/com/inspire/common/contract/exception/TestErrorCode.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/contract/src/test/java/com/inspire/common/contract/exception/TestException.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/contract/src/test/java/com/inspire/common/contract/exception/TestException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/cookie/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/common/cookie/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/cookie/src/main/java/com/inspire/common/cookie/CookieAttributes.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/cookie/src/main/java/com/inspire/common/cookie/model/CookieAttributes.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/cookie/src/main/java/com/inspire/common/cookie/CookieUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/cookie/src/main/java/com/inspire/common/cookie/servlet/CookieUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/cookie/src/main/java/com/inspire/common/cookie/config/CookieAutoConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/cookie/src/main/java/com/inspire/common/cookie/autoconfigure/CookieAutoConfiguration.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/cookie/src/main/resources/META-INF/spring/org.springframework.boot.autoconfigure.AutoConfiguration.imports" beforeDir="false" afterPath="$PROJECT_DIR$/common/cookie/src/main/resources/META-INF/spring/org.springframework.boot.autoconfigure.AutoConfiguration.imports" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/cookie/src/test/java/com/inspire/common/cookie/CookieUtilsTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/cookie/src/test/java/com/inspire/common/cookie/CookieUtilsTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/cookie/src/test/java/com/inspire/common/cookie/config/CookieAutoConfigurationTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/cookie/src/test/java/com/inspire/common/cookie/config/ServletCookieAutoConfigurationTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/jwt/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/common/jwt/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/jwt/src/main/java/com/inspire/common/jwt/JwtUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/jwt/src/main/java/com/inspire/common/jwt/JwtUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/jwt/src/main/java/com/inspire/common/jwt/JwtValidationException.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/jwt/src/main/java/com/inspire/common/jwt/exception/JwtValidationException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/jwt/src/main/java/com/inspire/common/jwt/config/JwtAutoConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/jwt/src/main/java/com/inspire/common/jwt/autoconfigure/JwtAutoConfiguration.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/jwt/src/main/resources/META-INF/spring/org.springframework.boot.autoconfigure.AutoConfiguration.imports" beforeDir="false" afterPath="$PROJECT_DIR$/common/jwt/src/main/resources/META-INF/spring/org.springframework.boot.autoconfigure.AutoConfiguration.imports" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/jwt/src/test/java/com/inspire/common/jwt/config/JwtAutoConfigurationTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/jwt/src/test/java/com/inspire/common/jwt/config/JwtAutoConfigurationTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gradle/libs.versions.toml" beforeDir="false" afterPath="$PROJECT_DIR$/gradle/libs.versions.toml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/settings.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/settings.gradle" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -91,6 +94,48 @@
                 <item name="inspire-be" type="2d1252cf:ModuleNode" />
                 <item name="common" type="2d1252cf:ModuleNode" />
               </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="inspire-be" type="f1a62948:ProjectNode" />
+                <item name="inspire-be" type="2d1252cf:ModuleNode" />
+                <item name="common" type="2d1252cf:ModuleNode" />
+                <item name="cookie" type="2d1252cf:ModuleNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="inspire-be" type="f1a62948:ProjectNode" />
+                <item name="inspire-be" type="2d1252cf:ModuleNode" />
+                <item name="common" type="2d1252cf:ModuleNode" />
+                <item name="cookie" type="2d1252cf:ModuleNode" />
+                <item name="Dependencies" type="6de06a37:ExternalSystemViewDefaultContributor$MyDependenciesNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="inspire-be" type="f1a62948:ProjectNode" />
+                <item name="inspire-be" type="2d1252cf:ModuleNode" />
+                <item name="common" type="2d1252cf:ModuleNode" />
+                <item name="cookie" type="2d1252cf:ModuleNode" />
+                <item name="Dependencies" type="6de06a37:ExternalSystemViewDefaultContributor$MyDependenciesNode" />
+                <item name="compileClasspath" type="62daadca:ExternalSystemViewDefaultContributor$DependencyScopeExternalSystemNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="inspire-be" type="f1a62948:ProjectNode" />
+                <item name="inspire-be" type="2d1252cf:ModuleNode" />
+                <item name="common" type="2d1252cf:ModuleNode" />
+                <item name="cookie" type="2d1252cf:ModuleNode" />
+                <item name="Dependencies" type="6de06a37:ExternalSystemViewDefaultContributor$MyDependenciesNode" />
+                <item name="runtimeClasspath" type="62daadca:ExternalSystemViewDefaultContributor$DependencyScopeExternalSystemNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="inspire-be" type="f1a62948:ProjectNode" />
+                <item name="inspire-be" type="2d1252cf:ModuleNode" />
+                <item name="common" type="2d1252cf:ModuleNode" />
+                <item name="cookie" type="2d1252cf:ModuleNode" />
+                <item name="Dependencies" type="6de06a37:ExternalSystemViewDefaultContributor$MyDependenciesNode" />
+                <item name="testCompileClasspath" type="62daadca:ExternalSystemViewDefaultContributor$DependencyScopeExternalSystemNode" />
+              </path>
             </expand>
             <select />
           </tree_state>
@@ -101,9 +146,11 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="AnnotationType" />
+        <option value="Exception" />
         <option value="Interface" />
-        <option value="Enum" />
         <option value="Class" />
+        <option value="Enum" />
       </list>
     </option>
   </component>
@@ -125,14 +172,19 @@
     "Gradle.CookieAutoConfigurationTest.executor": "Run",
     "Gradle.CookieUtilsTest.executor": "Run",
     "Gradle.GlobalControllerAdviceTest.executor": "Run",
+    "Gradle.GlobalControllerAdviceTest.testResponseBodyAdvice2.executor": "Run",
+    "Gradle.GlobalControllerAdviceTest.testValidation.executor": "Run",
     "Gradle.JwtAutoConfigurationTest.executor": "Run",
     "Gradle.JwtUtilsTest.executor": "Run",
     "Gradle.Load Gradle Dependencies.executor": "Run",
+    "Gradle.ReactiveCookieAutoConfigurationTest.executor": "Run",
+    "Gradle.ServletCookieAutoConfigurationTest.executor": "Run",
     "ModuleVcsDetector.initialDetectionPerformed": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
     "RunOnceActivity.git.unshallow": "true",
     "RunOnceActivity.typescript.service.memoryLimit.init": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "git-widget-placeholder": "main",
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
@@ -141,77 +193,24 @@
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "onboarding.tips.debug.path": "C:/Users/ws050/mini2/inspire-be/user-service/src/main/java/com/inspire/Main.java",
+    "onboarding.tips.debug.path": "C:/Users/ws050/mini2/inspire-be/common/core/src/main/java/com/inspire/Main.java",
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "project.kotlinCompiler",
+    "settings.editor.selected.configurable": "File.Encoding",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\ws050\mini2\inspire-be\common\contract\src\test\resources" />
       <recent name="C:\Users\ws050\mini2\inspire-be\common\contract\src\main\resources\META-INF\spring" />
     </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="com.inspire.common.jwt" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.GlobalControllerAdviceTest">
-    <configuration name="CookieAutoConfigurationTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":common:cookie:test" />
-            <option value="--tests" />
-            <option value="&quot;com.inspire.common.cookie.config.CookieAutoConfigurationTest&quot;" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <ExternalSystemDebugDisabled>false</ExternalSystemDebugDisabled>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <RunAsTest>true</RunAsTest>
-      <GradleProfilingDisabled>false</GradleProfilingDisabled>
-      <GradleCoverageDisabled>false</GradleCoverageDisabled>
-      <method v="2" />
-    </configuration>
-    <configuration name="CookieUtilsTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":common:cookie:test" />
-            <option value="--tests" />
-            <option value="&quot;com.inspire.common.cookie.CookieUtilsTest&quot;" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <ExternalSystemDebugDisabled>false</ExternalSystemDebugDisabled>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <RunAsTest>true</RunAsTest>
-      <GradleProfilingDisabled>false</GradleProfilingDisabled>
-      <GradleCoverageDisabled>false</GradleCoverageDisabled>
-      <method v="2" />
-    </configuration>
+  <component name="RunManager" selected="Gradle.GlobalControllerAdviceTest.testValidation">
     <configuration name="GlobalControllerAdviceTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -226,6 +225,60 @@
             <option value=":common:contract:test" />
             <option value="--tests" />
             <option value="&quot;com.inspire.common.contract.GlobalControllerAdviceTest&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <ExternalSystemDebugDisabled>false</ExternalSystemDebugDisabled>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>true</RunAsTest>
+      <GradleProfilingDisabled>false</GradleProfilingDisabled>
+      <GradleCoverageDisabled>false</GradleCoverageDisabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="GlobalControllerAdviceTest.testResponseBodyAdvice2" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":common:contract:test" />
+            <option value="--tests" />
+            <option value="&quot;com.inspire.common.contract.GlobalControllerAdviceTest.testResponseBodyAdvice2&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <ExternalSystemDebugDisabled>false</ExternalSystemDebugDisabled>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>true</RunAsTest>
+      <GradleProfilingDisabled>false</GradleProfilingDisabled>
+      <GradleCoverageDisabled>false</GradleCoverageDisabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="GlobalControllerAdviceTest.testValidation" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":common:contract:test" />
+            <option value="--tests" />
+            <option value="&quot;com.inspire.common.contract.GlobalControllerAdviceTest.testValidation&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -300,13 +353,20 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="UserApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="inspire-be.user-service.main" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.inspire.user.UserApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.GlobalControllerAdviceTest" />
-        <item itemvalue="Gradle.CookieAutoConfigurationTest" />
-        <item itemvalue="Gradle.CookieUtilsTest" />
+        <item itemvalue="Gradle.GlobalControllerAdviceTest.testValidation" />
+        <item itemvalue="Gradle.GlobalControllerAdviceTest.testResponseBodyAdvice2" />
         <item itemvalue="Gradle.JwtUtilsTest" />
         <item itemvalue="Gradle.JwtAutoConfigurationTest" />
+        <item itemvalue="Gradle.GlobalControllerAdviceTest" />
       </list>
     </recent_temporary>
   </component>
@@ -335,7 +395,13 @@
       <workItem from="1773424426929" duration="100000" />
       <workItem from="1773424535558" duration="489000" />
       <workItem from="1773425046809" duration="3966000" />
-      <workItem from="1773429054962" duration="1475000" />
+      <workItem from="1773429054962" duration="2299000" />
+      <workItem from="1773431945794" duration="2738000" />
+      <workItem from="1773506386383" duration="10387000" />
+      <workItem from="1773521074267" duration="1265000" />
+      <workItem from="1773523355707" duration="13000" />
+      <workItem from="1773527987988" duration="9803000" />
+      <workItem from="1773575096469" duration="25910000" />
     </task>
     <servers />
   </component>

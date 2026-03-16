@@ -1,9 +1,11 @@
-package com.inspire.common.cookie;
+package com.inspire.common.cookie.model;
 
 import lombok.Builder;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.http.ResponseCookie;
 import org.springframework.util.Assert;
 
+import java.util.Optional;
 import java.util.Set;
 
 /**

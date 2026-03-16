@@ -9,8 +9,11 @@ repositories {
 }
 
 dependencies {
+    implementation(libs.springdoc.swagger)
+    compileOnly project(':common:core')
     compileOnly 'jakarta.validation:jakarta.validation-api'
     compileOnly 'org.springframework.boot:spring-boot-starter-web'
+    testImplementation project(':common:core')
     testImplementation 'org.springframework.boot:spring-boot-starter-web'
     testImplementation 'jakarta.servlet:jakarta.servlet-api'
 }

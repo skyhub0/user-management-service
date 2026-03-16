@@ -5,8 +5,10 @@ plugins {
 version = "1.0.0"
 
 dependencies {
-    compileOnly libs.jjwt.api
-    compileOnly project(':common:core')
+    api libs.jjwt.api
+    implementation project(':common:core')
+    implementation libs.jjwt.impl
+    implementation libs.jjwt.jackson
 
     testCompileOnly libs.jjwt.api
     testRuntimeOnly project(':common:core')

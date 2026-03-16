@@ -19,10 +19,7 @@ import static org.springframework.test.web.servlet.request.MockMvcRequestBuilder
 import static org.springframework.test.web.servlet.result.MockMvcResultHandlers.print;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
-@SpringBootTest(properties = {
-        "spring.messages.encoding=UTF-8",
-        "spring.messages.fallback-to-system-locale=false"
-})
+@SpringBootTest
 @AutoConfigureMockMvc
 public class GlobalControllerAdviceTest {
 
@@ -31,9 +28,6 @@ public class GlobalControllerAdviceTest {
 
     @Autowired
     private ObjectMapper objectMapper;
-
-    @Autowired
-    private MessageSource messageSource;
 
     @Test
     void testResponseBodyAdvice() throws Exception {

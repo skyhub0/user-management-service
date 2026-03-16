@@ -6,12 +6,7 @@ version = '1.0.0'
 
 dependencies {
     implementation project(":common:contract")
-    implementation project(":common:core")
     implementation project(":common:jwt")
     implementation project(":common:cookie")
     implementation 'org.springframework.boot:spring-boot-starter-actuator'
-
-    compileOnly libs.jjwt.api
-    implementation libs.jjwt.impl
-    implementation libs.jjwt.jackson
 }

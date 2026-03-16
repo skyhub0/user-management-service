@@ -1,0 +1,10 @@
+server:
+  port: 12321
+
+jwt:
+  access:
+    secret: asdfasdfasdfasdfasdfasdfsadfasdfasdfasdfasdfasdfsadf
+    expires: 10000000
+  refresh:
+    secret: asdfasdfasdfasdfasdfasdfsadfasdfasdfasdfasdfasdfsadf
+    expires: 10000000

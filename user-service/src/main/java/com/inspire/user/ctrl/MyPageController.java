@@ -24,15 +24,4 @@ public class MyPageController {
         UserProfileResponse response = myPageService.getUserProfile(userId);
         return ResponseEntity.ok(response);
     }
-
-    // 2. 월별 일정 리스트 조회 (개인 일정 + 국가 시험)
-    @GetMapping("/events")
-    public ResponseEntity<List<CalendarEventResponse>> getMonthlyEvents(
-            @RequestHeader("user-id") Long userId,
-            @RequestParam int year,
-            @RequestParam int month) {
-        
-        List<CalendarEventResponse> response = myPageService.getMonthlyEvents(userId, year, month);
-        return ResponseEntity.ok(response);
-    }
 }

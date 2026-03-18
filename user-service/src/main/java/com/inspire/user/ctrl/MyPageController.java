@@ -4,8 +4,6 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-import com.inspire.user.domain.dto.CalendarEventResponse;
-import com.inspire.user.domain.dto.UserProfileResponse;
 import com.inspire.user.service.MyPageService;
 
 import java.util.List;

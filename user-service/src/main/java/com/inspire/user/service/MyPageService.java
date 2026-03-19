@@ -26,16 +26,4 @@ public class MyPageService {
                 .map(UserResponseDTO::fromEntity)
                 .orElseThrow(() -> new EntityNotFoundException("유저 정보를 찾을 수 없습니다"));
     }
-
-    @Transactional
-    public UserResponseDTO update(Long user, UserRequestDTO request) {
-        System.out.println(">>>> User service update");
-        
-        UserEntity userEntity = userRepository.findById(user)
-                .orElseThrow(() -> new EntityNotFoundException("수정할 유저 정보를 찾을 수 없습니다"));
-                
-        userEntity.update(request.getName());
-
-        return UserResponseDTO.fromEntity(userEntity);
-    }
 }

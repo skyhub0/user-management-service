@@ -31,20 +31,4 @@ public class MyPageController {
             return new ResponseEntity<>(HttpStatus.NOT_FOUND); // 404
         }
     }
-
-    // 2. 프로필 수정 (Update)
-    @PutMapping("/update")
-    public ResponseEntity<Void> update(@RequestHeader("X-User-Id") Long user, 
-                                       @RequestBody UserRequestDTO request) {
-        System.out.println(">>>> User ctrl path : /update");
-        System.out.println(">>>> params : " + request);
-
-        UserResponseDTO response = myPageService.update(user, request);
-
-        if(response != null ) {
-            return ResponseEntity.status(HttpStatus.OK).build();
-        } else {
-            return ResponseEntity.status(HttpStatus.NOT_FOUND).build() ;
-        }
-    }
 }

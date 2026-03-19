@@ -1,32 +1,28 @@
 package com.inspire.user.service;
 
-
-import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.inspire.user.dao.UserRepository;
-import com.inspire.user.domain.entity.UserEntity;
+import com.inspire.user.domain.dto.UserResponseDTO;
 
-import java.time.LocalDate;
-import java.time.YearMonth;
-import java.util.ArrayList;
-import java.util.List;
+import jakarta.persistence.EntityNotFoundException;
+import lombok.RequiredArgsConstructor;
 
 @Service
 @RequiredArgsConstructor
+@Transactional
 public class MyPageService {
 
     private final UserRepository userRepository;
 
-    // 1. 프로필 조회 (소개, 전화번호 제외)
-    public UserProfileResponse getUserProfile(Long userId) {
-        UserEntity user = userRepository.findById(userId).orElseThrow(() -> new RuntimeException("User not found"));
-
-        return UserProfileResponse.builder()
-                .name(user.getName())
-                .email(auth.getEmail())
-                .avatar("") // 프론트엔드 목데이터에 맞춰 빈 문자열 전송
-                .build();
+    @Transactional(readOnly = true)
+    public UserResponseDTO read(Long user) {
+        System.out.println(">>>> User service read");
+        
+        // Auth 연동(통신)은 나중에 하므로 UserEntity만 조회해서 바로 DTO로 변환
+        return userRepository.findById(user)
+                .map(UserResponseDTO::fromEntity)
+                .orElseThrow(() -> new EntityNotFoundException("유저 정보를 찾을 수 없습니다"));
     }
 }

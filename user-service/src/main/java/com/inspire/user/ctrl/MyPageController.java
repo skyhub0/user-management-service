@@ -1,25 +1,32 @@
 package com.inspire.user.ctrl;
 
-import lombok.RequiredArgsConstructor;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import com.inspire.user.domain.dto.UserResponseDTO;
 import com.inspire.user.service.MyPageService;
 
-import java.util.List;
+import lombok.RequiredArgsConstructor;
 
 @RestController
-@RequestMapping("/api/mypage")
+@RequestMapping("/api/mypage") 
 @RequiredArgsConstructor
 public class MyPageController {
 
     private final MyPageService myPageService;
 
-    // 1. 유저 프로필 조회
-    @GetMapping("/profile")
-    public ResponseEntity<UserProfileResponse> getProfile(@RequestHeader("user-id") Long userId) {
-        // 실제 운영에서는 헤더나 JWT 토큰에서 userId를 추출하여 사용
-        UserProfileResponse response = myPageService.getUserProfile(userId);
-        return ResponseEntity.ok(response);
+    @GetMapping("/read")
+    public ResponseEntity<UserResponseDTO> read(@RequestHeader("X-User-Id") Long user) {
+        System.out.println(">>>> User ctrl path : /read");
+        System.out.println(">>>> params user : " + user);
+
+        UserResponseDTO response = myPageService.read(user);
+        
+        if(response != null) {
+            return new ResponseEntity<>(response, HttpStatus.OK); // 200
+        } else {
+            return new ResponseEntity<>(HttpStatus.NOT_FOUND); // 404
+        }
     }
 }

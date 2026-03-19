@@ -4,6 +4,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import com.inspire.user.domain.dto.UserRequestDTO;
 import com.inspire.user.domain.dto.UserResponseDTO;
 import com.inspire.user.service.MyPageService;
 
@@ -16,6 +17,7 @@ public class MyPageController {
 
     private final MyPageService myPageService;
 
+    // 1. 프로필 조회 (Read)
     @GetMapping("/read")
     public ResponseEntity<UserResponseDTO> read(@RequestHeader("X-User-Id") Long user) {
         System.out.println(">>>> User ctrl path : /read");
@@ -27,6 +29,22 @@ public class MyPageController {
             return new ResponseEntity<>(response, HttpStatus.OK); // 200
         } else {
             return new ResponseEntity<>(HttpStatus.NOT_FOUND); // 404
+        }
+    }
+
+    // 2. 프로필 수정 (Update)
+    @PutMapping("/update")
+    public ResponseEntity<Void> update(@RequestHeader("X-User-Id") Long user, 
+                                       @RequestBody UserRequestDTO request) {
+        System.out.println(">>>> User ctrl path : /update");
+        System.out.println(">>>> params : " + request);
+
+        UserResponseDTO response = myPageService.update(user, request);
+
+        if(response != null ) {
+            return ResponseEntity.status(HttpStatus.OK).build();
+        } else {
+            return ResponseEntity.status(HttpStatus.NOT_FOUND).build() ;
         }
     }
 }

@@ -4,7 +4,9 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.inspire.user.dao.UserRepository;
+import com.inspire.user.domain.dto.UserRequestDTO;
 import com.inspire.user.domain.dto.UserResponseDTO;
+import com.inspire.user.domain.entity.UserEntity;
 
 import jakarta.persistence.EntityNotFoundException;
 import lombok.RequiredArgsConstructor;
@@ -20,9 +22,20 @@ public class MyPageService {
     public UserResponseDTO read(Long user) {
         System.out.println(">>>> User service read");
         
-        // Auth 연동(통신)은 나중에 하므로 UserEntity만 조회해서 바로 DTO로 변환
         return userRepository.findById(user)
                 .map(UserResponseDTO::fromEntity)
                 .orElseThrow(() -> new EntityNotFoundException("유저 정보를 찾을 수 없습니다"));
+    }
+
+    @Transactional
+    public UserResponseDTO update(Long user, UserRequestDTO request) {
+        System.out.println(">>>> User service update");
+        
+        UserEntity userEntity = userRepository.findById(user)
+                .orElseThrow(() -> new EntityNotFoundException("수정할 유저 정보를 찾을 수 없습니다"));
+                
+        userEntity.update(request.getName());
+
+        return UserResponseDTO.fromEntity(userEntity);
     }
 }

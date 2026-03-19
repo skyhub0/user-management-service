@@ -11,7 +11,7 @@ import com.inspire.user.service.MyPageService;
 import lombok.RequiredArgsConstructor;
 
 @RestController
-@RequestMapping("/api/mypage") 
+@RequestMapping("/profile") 
 @RequiredArgsConstructor
 public class MyPageController {
 

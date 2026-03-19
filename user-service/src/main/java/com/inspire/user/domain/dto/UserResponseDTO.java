@@ -15,11 +15,12 @@ import lombok.ToString;
 public class UserResponseDTO {
 
     private String name;
-    // 통신 연동 전이므로 이메일 정보는 임시로 제외
+    private String email; 
 
-    public static UserResponseDTO fromEntity(UserEntity entity) {
+    public static UserResponseDTO fromEntity(UserEntity entity, String email) {
         return UserResponseDTO.builder()
                 .name(entity.getName())
+                .email(email)
                 .build();
     }
 }
